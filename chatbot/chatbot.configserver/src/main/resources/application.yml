@@ -1,0 +1,17 @@
+server:
+  port: 8888
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AngelMercado/config-repo-l
+          username: myjava@outlook.es 
+          password: capitalista93
+          search-paths: userservice, itemservice
+        encrypt:
+          enabled: false
+security:
+  basic:
+    enabled: false
