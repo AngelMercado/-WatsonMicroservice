@@ -1,4 +1,4 @@
-package com.demochatboot.conversation.model;
+package com.demochatbot.conversation.model;
 
 import com.ibm.watson.developer_cloud.assistant.v1.model.DialogNode;
 

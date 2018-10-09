@@ -53,9 +53,9 @@
 
 
   <modules>
-    <module>demochatboot.payments</module>
-    <module>demochatboot.loans</module>
-    <module>demochatboot.conversation</module>
+    <module>demochatbot.payments</module>
+    <module>demochatbot.loans</module>
+    <module>demochatbot.conversation</module>
     <module>demochatbot.watsapp</module>
   </modules>
 </project>

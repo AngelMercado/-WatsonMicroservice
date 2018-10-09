@@ -1,0 +1,8 @@
+watson:
+  authentication:
+    url: https://gateway.watsonplatform.net/assistant/api
+    username: 97988ae8-6239-4624-9810-12f202583e89
+    password: qsQmauKnqlRV
+    
+  workspace1:
+    name: first_chat_bot_conv
