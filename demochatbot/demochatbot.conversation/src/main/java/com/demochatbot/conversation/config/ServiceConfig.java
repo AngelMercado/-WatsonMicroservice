@@ -11,7 +11,7 @@ public class ServiceConfig {
 	private String userName;
 	@Value("${watson.authentication.password}")
 	private String password;
-	@Value("${watson.authentication.password}")
+	@Value("${watson.workspace1.name}")
 	private String workSpaceName;
 	public String getuRL() {
 		return uRL;
