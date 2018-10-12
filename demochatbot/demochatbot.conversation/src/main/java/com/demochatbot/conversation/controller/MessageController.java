@@ -18,8 +18,14 @@ public class MessageController {
 	@Autowired
 	ConversationServiceImpl conversationService;
 	
+	@RequestMapping(method = RequestMethod.GET)
+	public String messageResponse() {
+		return "test";
+	}
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public MessageResponse messageResponse(@RequestBody Message msg) {
 		return conversationService.sendMessage(msg);
 	}
+	
 }

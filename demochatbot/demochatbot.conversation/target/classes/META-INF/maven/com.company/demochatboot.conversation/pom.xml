@@ -102,6 +102,12 @@
 			<artifactId>java-sdk</artifactId>
 			<version>6.7.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.11.0</version>
+		</dependency>
+
 		<!-- End Watson Dependency -->
 	</dependencies>
 

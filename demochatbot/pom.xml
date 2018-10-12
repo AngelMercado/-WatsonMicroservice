@@ -57,5 +57,6 @@
     <module>demochatbot.loans</module>
     <module>demochatbot.conversation</module>
     <module>demochatbot.watsapp</module>
+    <module>demochatbot.fbmessenger</module>
   </modules>
 </project>
