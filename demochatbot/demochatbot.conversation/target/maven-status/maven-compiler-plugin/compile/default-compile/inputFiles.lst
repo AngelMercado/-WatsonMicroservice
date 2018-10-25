@@ -1,1 +1,13 @@
-/home/angel/WatsonMicroservice/demochatboot/demochatboot.conversation/src/main/java/org/demochatboot/conversation/App.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/config/ServiceConfig.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/serviceImpl/ConversationServiceImpl.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/model/LocalIntent.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/service/ConversationService.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/controller/DialogController.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/model/LocalFlow.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/config/AssistantConfiguration.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/model/LocalDialog.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/model/LocalEntity.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/controller/ConvertationController.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/model/GenericMessage.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/App.java
+/home/angel/WatsonMicroservice/demochatbot/demochatbot.conversation/src/main/java/com/demochatbot/conversation/repository/MessageRepository.java

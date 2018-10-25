@@ -1,0 +1,7 @@
+  eureka:
+    image: cibercoatl/conversation
+    mem_limit: 1073741824
+    ports:
+       - "8080:8080"
+    environment:
+      ENCRYPT_KEY: "IMSYMMETRIC"

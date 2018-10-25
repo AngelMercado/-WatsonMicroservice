@@ -1,0 +1,13 @@
+com/demochatbot/conversation/controller/ConvertationController.class
+com/demochatbot/conversation/repository/MessageRepository.class
+com/demochatbot/conversation/model/LocalEntity.class
+com/demochatbot/conversation/controller/DialogController.class
+com/demochatbot/conversation/model/GenericMessage.class
+com/demochatbot/conversation/model/LocalFlow.class
+com/demochatbot/conversation/model/LocalIntent.class
+com/demochatbot/conversation/model/LocalDialog.class
+com/demochatbot/conversation/config/AssistantConfiguration.class
+com/demochatbot/conversation/service/ConversationService.class
+com/demochatbot/conversation/serviceImpl/ConversationServiceImpl.class
+com/demochatbot/conversation/App.class
+com/demochatbot/conversation/config/ServiceConfig.class

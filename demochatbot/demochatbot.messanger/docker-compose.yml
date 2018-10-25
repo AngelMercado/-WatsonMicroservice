@@ -1,0 +1,7 @@
+  eureka:
+    image: cibercoatl/fbmessanger
+    mem_limit: 1073741824
+    ports:
+       - "8084:8084"
+    environment:
+      ENCRYPT_KEY: "IMSYMMETRIC"

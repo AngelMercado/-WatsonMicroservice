@@ -96,7 +96,7 @@ public abstract class Bot extends BaseBot {
             if (!callback.getObject().equals("page")) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
-            logger.debug("Callback from fb: {}", callback);
+            logger.info("Callback from fb: {}", callback);
             for (Entry entry : callback.getEntry()) {
                 if (entry.getMessaging() != null) {
                     for (Event event : entry.getMessaging()) {
@@ -143,8 +143,9 @@ public abstract class Bot extends BaseBot {
     }
 
     private void sendTypingOnIndicator(User recipient) {
+    	Event event = new Event().setRecipient(recipient).setSenderAction("typing_on");
         restTemplate.postForEntity(fbSendUrl,
-                new Event().setRecipient(recipient).setSenderAction("typing_on"), Response.class);
+                event, Response.class);
     }
 
     private void sendTypingOffIndicator(User recipient) {

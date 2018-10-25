@@ -1,0 +1,7 @@
+  eureka:
+    image: cibercoatl/ella
+    mem_limit: 1073741824
+    ports:
+       - "8081:8081"
+    environment:
+      ENCRYPT_KEY: "IMSYMMETRIC"

@@ -1,0 +1,7 @@
+  eureka:
+    image: ciberCoatl/eureka
+    mem_limit: 1073741824
+    ports:
+       - "8761:8761"
+    environment:
+      ENCRYPT_KEY: "IMSYMMETRIC"

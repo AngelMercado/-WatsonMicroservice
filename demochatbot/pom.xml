@@ -58,5 +58,9 @@
     <module>demochatbot.conversation</module>
     <module>demochatbot.watsapp</module>
     <module>demochatbot.fbmessenger</module>
+    <module>demochatbot.ella</module>
+    <module>demochat.atmlocator</module>
+    <module>demochatbot.atmlocator</module>
+    <module>demochatbot.eureka</module>
   </modules>
 </project>

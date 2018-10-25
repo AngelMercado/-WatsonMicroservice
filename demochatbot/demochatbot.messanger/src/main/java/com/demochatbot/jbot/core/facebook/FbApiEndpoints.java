@@ -22,7 +22,7 @@ public class FbApiEndpoints {
     }
 
     public String getUserApi() {
-        return fbGraphApi + "/{userId}?access_token={token}";
+        return fbGraphApi + "/me/{userId}?access_token={token}";
     }
 
     public String getSubscribeUrl() {
@@ -30,7 +30,7 @@ public class FbApiEndpoints {
     }
 
     public String getFbSendUrl() {
-        return fbGraphApi + "/messages?access_token={PAGE_ACCESS_TOKEN}";
+        return fbGraphApi + "/me/messages?access_token={PAGE_ACCESS_TOKEN}";
     }
 
     public String getFbMessengerProfileUrl() {

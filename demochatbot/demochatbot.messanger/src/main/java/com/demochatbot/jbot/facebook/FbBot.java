@@ -1,13 +1,19 @@
 package com.demochatbot.jbot.facebook;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 
+import com.demochatbot.ella.model.GenericMessage;
 import com.demochatbot.jbot.core.common.Controller;
 import com.demochatbot.jbot.core.common.EventType;
 import com.demochatbot.jbot.core.common.JBot;
 import com.demochatbot.jbot.core.facebook.Bot;
 import com.demochatbot.jbot.core.facebook.models.*;
+import com.demochatbot.jbot.service.EllaService;
+import com.demochatbot.jbot.service.impl.EllaServiceImpl;
 
 /**
  * A simple Facebook Bot. You can create multiple bots by just
@@ -20,7 +26,8 @@ import com.demochatbot.jbot.core.facebook.models.*;
 @JBot
 @Profile("facebook")
 public class FbBot extends Bot {
-
+	@Autowired
+	EllaServiceImpl ellaService;
     /**
      * Set this property in {@code application.properties}.
      */
@@ -54,6 +61,21 @@ public class FbBot extends Bot {
         setGreetingText(new Payload[]{new Payload().setLocale("default").setText("JBot is a Java Framework to help" +
                 " developers make Facebook, Slack and Twitter bots easily. You can see a quick demo by clicking " +
                 "the \"Get Started\" button.")});
+    }
+    
+    @Controller(events = {EventType.MESSAGE, EventType.POSTBACK}, pattern = "[A-Za-z]")
+    public void onWatson(Event event) {
+    	GenericMessage genericMessage = new GenericMessage();
+    	genericMessage.setUsername("angel");
+    	genericMessage.setSource("fb");
+    	genericMessage.setText(event.getMessage().getText());
+        Message fbMessage = ellaService.getMessageResponse(genericMessage);
+        Button[] quickReplies = new Button[]{
+                new Button().setContentType("text").setTitle("Sure").setPayload("yes"),
+                new Button().setContentType("text").setTitle("Nope").setPayload("no")
+        };
+        reply(event,fbMessage);
+//        reply(event, new Message().setText("Hello, I am JBot. Would you like to see more?").setQuickReplies(quickReplies));
     }
 
     /**
@@ -112,19 +134,18 @@ public class FbBot extends Bot {
     @Controller(events = EventType.MESSAGE, pattern = "(?i:list)")
     public void showList(Event event) {
         Element[] elements = new Element[]{
-                new Element().setTitle("AnimateScroll").setSubtitle("A jQuery Plugin for Animating Scroll.")
-                        .setImageUrl("https://plugins.compzets.com/images/as-logo.png")
+                new Element().setTitle("ATM Toluca").setSubtitle("10 KM route 1")
+                        .setImageUrl("https://i.imgur.com/mM82YXg.png")
                         .setDefaultAction(new Button().setType("web_url").setMessengerExtensions(true)
-                        .setUrl("https://plugins.compzets.com/animatescroll/")),
-                new Element().setTitle("Windows on Top").setSubtitle("Keeps a specific Window on Top of all others.")
-                        .setImageUrl("https://plugins.compzets.com/images/compzets-logo.png")
+                        .setUrl("https://www.hsbc.com.mx/1/2//es")
+                        )
+                        ,
+                new Element().setTitle("Atm Metepec").setSubtitle("9 KM route 2")
+                        .setImageUrl("https://i.imgur.com/mM82YXg.png")
                         .setDefaultAction(new Button().setType("web_url").setMessengerExtensions(true)
-                        .setUrl("https://www.compzets.com/view-upload.php?id=702&action=view")),
-                new Element().setTitle("SimpleFill").setSubtitle("Simplest form filler ever.")
-                        .setImageUrl("https://plugins.compzets.com/simplefill/chrome-extension/icon-64.png")
-                        .setDefaultAction(new Button().setType("web_url").setMessengerExtensions(true)
-                        .setUrl("https://plugins.compzets.com/simplefill/"))
-        };
+                        .setUrl("https://www.hsbc.com.mx/1/2//es")
+                        )
+                        };
         reply(event, new Message().setAttachment(new Attachment().setType("template").setPayload(new Payload()
                 .setTemplateType("list").setElements(elements))));
     }
@@ -137,8 +158,8 @@ public class FbBot extends Bot {
     @Controller(events = EventType.MESSAGE, pattern = "(?i)(bye|tata|ttyl|cya|see you)")
     public void showGithubLink(Event event) {
         reply(event, new Message().setAttachment(new Attachment().setType("template").setPayload(new Payload()
-                .setTemplateType("button").setText("Bye. Happy coding!").setButtons(new Button[]{new Button()
-                        .setType("web_url").setTitle("View code").setUrl("https://github.com/ramswaroop/jbot")}))));
+                .setTemplateType("button").setText("Bye").setButtons(new Button[]{new Button()
+                        .setType("web_url").setTitle("our site").setUrl("https://www.hsbc.com.mx/1/2//es")}))));
     }
 
 
@@ -202,5 +223,5 @@ public class FbBot extends Bot {
             reply(event, "Okay, don't forget to attend the meeting tomorrow :)");
         }
         stopConversation(event);    // stop conversation
-    }
+}
 }

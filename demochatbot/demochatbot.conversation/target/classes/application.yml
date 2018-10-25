@@ -1,8 +1,14 @@
+server:
+  port: 8080
+  
 watson:
   authentication:
     url: https://gateway.watsonplatform.net/assistant/api
-    username: 97988ae8-6239-4624-9810-12f202583e89
-    password: qsQmauKnqlRV
-    
+    username: 7ec74014-003a-4fbe-a3e0-06c69a591705
+    password: 0ULqNwXHd2Sb
   workspace1:
-    name: afcb9ab7-e4c4-4352-a7e7-7d8d4b7854e8
+    name: b4666c9c-b6dd-41c9-9c67-513d61f12a6b
+    
+security:
+  basic:
+    enabled: false
