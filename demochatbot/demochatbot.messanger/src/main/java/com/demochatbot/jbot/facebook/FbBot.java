@@ -20,8 +20,8 @@ import com.demochatbot.jbot.service.impl.EllaServiceImpl;
  * extending {@link Bot} class like this one. Though it is
  * recommended to create only bot per jbot instance.
  * 
- * @author ramswaroop
- * @version 17/09/2016
+ * @author amercado
+ * 
  */
 @JBot
 @Profile("facebook")
@@ -131,19 +131,19 @@ public class FbBot extends Bot {
      *
      * @param event
      */
-    @Controller(events = EventType.MESSAGE, pattern = "(?i:list)")
+    @Controller(events = EventType.MESSAGE, pattern = "(?i:atms)")
     public void showList(Event event) {
         Element[] elements = new Element[]{
                 new Element().setTitle("ATM Toluca").setSubtitle("10 KM route 1")
                         .setImageUrl("https://i.imgur.com/mM82YXg.png")
                         .setDefaultAction(new Button().setType("web_url").setMessengerExtensions(true)
-                        .setUrl("https://www.hsbc.com.mx/1/2//es")
+                        .setUrl("https://www.google.com/maps/search/hsbc+metepec/@19.2701668,-99.6178967,14z/data=!3m1!4b1")
                         )
                         ,
                 new Element().setTitle("Atm Metepec").setSubtitle("9 KM route 2")
                         .setImageUrl("https://i.imgur.com/mM82YXg.png")
                         .setDefaultAction(new Button().setType("web_url").setMessengerExtensions(true)
-                        .setUrl("https://www.hsbc.com.mx/1/2//es")
+                        .setUrl("https://www.google.com/maps/search/hsbc+metepec/@19.2701668,-99.6178967,14z/data=!3m1!4b1")
                         )
                         };
         reply(event, new Message().setAttachment(new Attachment().setType("template").setPayload(new Payload()
